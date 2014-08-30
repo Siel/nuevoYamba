@@ -26,12 +26,12 @@ public final class R {
     }
     public static final class id {
         public static final int action_purge=0x7f090007;
-        public static final int action_refresh=0x7f090006;
         public static final int action_settings=0x7f090004;
         public static final int action_tweet=0x7f090005;
         public static final int buttonTweet=0x7f090000;
         public static final int editStatus=0x7f090001;
         public static final int fragment_status=0x7f090003;
+        public static final int itemServiceStart=0x7f090006;
         public static final int textCount=0x7f090002;
     }
     public static final class layout {

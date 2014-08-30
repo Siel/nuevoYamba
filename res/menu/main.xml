@@ -13,10 +13,10 @@
         android:showAsAction="always|withText"
         android:title="Tweet"/>
     <item
-        android:id="@+id/action_refresh"
+        android:id="@+id/itemServiceStart"
         android:icon="@android:drawable/ic_menu_rotate"
         android:showAsAction="always"
-        android:title="Refresh"/>
+        android:title="titleRefresh"/>
     <item
         android:id="@+id/action_purge"
         android:icon="@android:drawable/ic_menu_delete"
