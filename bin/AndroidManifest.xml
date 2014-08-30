@@ -15,7 +15,14 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <service android:name=".RefreshService"></service>
+        <service android:name=".RefreshService" >
+        </service>
+
+        <provider
+            android:name="com.example.nuevoyamba.StatusProvider"
+            android:authorities="com.example.nuevoyamba.StatusProvider"
+            android:exported="false" />
+
         <activity
             android:name=".StatusActivity"
             android:label="@string/app_name" >
