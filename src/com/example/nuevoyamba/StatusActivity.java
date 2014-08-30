@@ -20,6 +20,20 @@ public class StatusActivity extends Activity {
 		getMenuInflater().inflate(R.menu.status, menu);
 		return true;
 	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) { // 
+		switch (item.getItemId()) { // 
+		case R.id.action_settings:
+			startActivity(new Intent(this, SettingsActivity.class)); // 
+			return true; // 
+		case R.id.action_tweet:
+			startActivity(new Intent(this, StatusActivity.class));
+			return true;
+		default:
+			return false;
+		}
+	}
 
 
 }

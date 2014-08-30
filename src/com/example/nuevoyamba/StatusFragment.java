@@ -61,8 +61,8 @@ public class StatusFragment extends Fragment implements OnClickListener {
 
 		buttonTweet.setOnClickListener(this);
 
-		twitter = new Twitter("student","password");
-		twitter.setAPIRootUrl("http://yamba.marakana.com/api");
+		//twitter = new Twitter("student","password");
+		//twitter.setAPIRootUrl("http://yamba.marakana.com/api");
 		return view;
 	}
 
@@ -82,12 +82,15 @@ public class StatusFragment extends Fragment implements OnClickListener {
 				SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity()); 
 				String username = prefs.getString("username", ""); // 
 				String password = prefs.getString("password", "");
+				String apiroot = prefs.getString("apiroot","http://yamba.marakana.com/api");
 				if (TextUtils.isEmpty(username) ||
 						TextUtils.isEmpty(password)) { // 
 					getActivity().startActivity(
 							new Intent(getActivity(), SettingsActivity.class));
 					return "Please update your username and password";
 				}
+				twitter=new Twitter(username,password);
+				twitter.setAPIRootUrl(apiroot);
 				Twitter.Status status = twitter.updateStatus(params[0]);
 				return status.text;
 			}catch(TwitterException e){
